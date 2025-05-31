@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Compra Foi Confirmada!</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✔️</text></svg>">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #28a745; /* Um tom de verde para indicar sucesso */
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .thank-you-image {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .whatsapp-link {
+            display: inline-block;
+            background-color: #25D366; /* Verde do WhatsApp */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-link:hover {
+            background-color: #1DA851;
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_ID_DO_PIXEL'); // <--- IMPORTANTE: SUBSTITUA SEU_ID_DO_PIXEL PELO SEU ID REAL
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_ID_DO_PIXEL&ev=PageView&noscript=1" // <--- IMPORTANTE: SUBSTITUA SEU_ID_DO_PIXEL PELO SEU ID REAL
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/1200px-Twitter_Verified_Badge.svg.png" alt="Checkmark de Confirmação" class="thank-you-image">
+        <h1>Obrigado pela sua compra!</h1>
+        <p>Sua transação foi processada com sucesso e seu pedido foi recebido.</p>
+        <p>Em breve entraremos em contato com mais detalhes sobre a entrega ou o acesso ao seu produto/serviço.</p>
+        <p>Se precisar de algo antes disso, pode nos chamar no WhatsApp:</p>
+        <a href="https://wa.me/SEU_NUMERO_WHATSAPP_AQUI?text=Ol%C3%A1%2C%20acabei%20de%20fazer%20uma%20compra%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."  class="whatsapp-link">Falar pelo WhatsApp</a>
+    </div>
+
+    <!-- Script para disparar o evento de Compra do Pixel do Facebook -->
+    <script>
+        fbq('track', 'Purchase', {
+            // Você pode adicionar um valor e moeda aqui se souber, por exemplo:
+            // value: 100.00,
+            // currency: 'BRL'
+            // Se você não tiver um valor exato ou não for relevante para sua otimização, pode deixar sem estes parâmetros.
+        });
+    </script>
+</body>
+</html>
